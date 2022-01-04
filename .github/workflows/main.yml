@@ -10,16 +10,19 @@ env:
   ARM_TENANT_ID: ${{ secrets.tenant_id }}
 
 jobs:
-  build:
+  terraform:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a one-line script
-        run: echo "ARM_CLIENT_ID = $ARM_CLIENT_ID"
+      - name: Setup terraform
+        uses: hashicorp/setup-terraform@v1
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Format
+        run: terraform fmt -check    
+      
+      - name: Terraform Plan
+        run: terraform plan
