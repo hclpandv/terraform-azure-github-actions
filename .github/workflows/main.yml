@@ -1,0 +1,25 @@
+name: TerraformAzureDeploy
+on:
+  push:
+    branches: 
+    - main
+env:
+  ARM_CLIENT_ID: ${{ secrets.client_id }}
+  ARM_CLIENT_SECRET: ${{ secrets.client_secret }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.subscription_id }}
+  ARM_TENANT_ID: ${{ secrets.tenant_id }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo "ARM_CLIENT_ID = $ARM_CLIENT_ID"
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
