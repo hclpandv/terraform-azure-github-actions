@@ -21,9 +21,6 @@ jobs:
       - name: Terraform Init
         run: terraform init
 
-      - name: Terraform Init
-        run: exit 1
-
       - name: Terraform Format
         run: terraform fmt -check    
       
