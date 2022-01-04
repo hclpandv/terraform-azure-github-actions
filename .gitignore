@@ -1,0 +1,6 @@
+creds.md
+*.hcl
+.terraform/
+*.tfvars
+*.tfstate
+*.backup
