@@ -56,10 +56,10 @@ resource "azurerm_virtual_machine" "jumpbox01" {
     computer_name  = var.jumpbox_vm_name_01
     admin_username = var.admin_username
     admin_password = var.admin_password
-  }
-  os_profile_linux_config {
-    disable_password_authentication = false
     # Comment below like to opt-out provisioning
     custom_data = base64encode(data.local_file.cloudinit.content)
+  }
+  os_profile_linux_config {
+    disable_password_authentication = false    
   }
 }
