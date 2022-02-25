@@ -4,12 +4,12 @@
 variable "rg_network" {
   type        = string
   description = "rg name for network resources"
-  default     = "rg-topgun-nw-weu-01"
+  default     = "rg-topgun-landingzone-weu-01"
 }
 variable "rg_server" {
   type        = string
   description = "rg name for VMs"
-  default     = "rg-topgun-srv-weu-02"
+  default     = "rg-topgun-infrastructure-weu-01"
 }
 
 variable "location" {
