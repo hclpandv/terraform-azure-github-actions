@@ -1,7 +1,7 @@
 resource "azurerm_network_security_rule" "mgmtAllowWeb" {
   name                        = "allowHttp"
   priority                    = 100
-  direction                   = "inbound"
+  direction                   = "Inbound"
   access                      = "Allow"
   protocol                    = "Tcp"
   source_port_range           = "*"
@@ -15,7 +15,7 @@ resource "azurerm_network_security_rule" "mgmtAllowWeb" {
 resource "azurerm_network_security_rule" "mgmtAllowSSH" {
   name                        = "allowSSH"
   priority                    = 110
-  direction                   = "inbound"
+  direction                   = "Inbound"
   access                      = "Allow"
   protocol                    = "Tcp"
   source_port_range           = "*"
