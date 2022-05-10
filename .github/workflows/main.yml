@@ -2,7 +2,7 @@ name: TerraformAzureDeploy
 on:
   push:
     branches: 
-    - main
+    - tf-validation-module
 env:
   ARM_CLIENT_ID: ${{ secrets.CLIENT_ID }}
   ARM_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
