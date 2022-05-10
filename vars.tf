@@ -15,7 +15,7 @@ variable "rg_server" {
 variable "url_validation" {
   type        = string
   description = "Azure URI to validate via API call"
-  default     = "https://management.azure.com/subscriptions/8bfff7c4-6972-4035-88a4-0e0121080864/resourcegroups/TerraformStateRG?api-version=2017-05-10"
+  default     = "https://management.azure.com/subscriptions/8bfff7c4-6972-4035-88a4-0e0121080864/resourcegroups/TerraformStateRG123?api-version=2017-05-10"
 }
 
 variable "api_token" {
