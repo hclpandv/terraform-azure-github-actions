@@ -1,3 +1,3 @@
-output "rgnetwork" {
-  value = http.example
-}
+# output "rgnetwork" {
+#   value = http.example
+# }
